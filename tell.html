@@ -74,11 +74,11 @@
                                 <input type="text" name="tloga" id="cloga" placeholder="Rua,Av,Trav..." size="10"></p>
 
                             <p><label for="cnum">Número:</label>
-                                <input type="number" name="tnum" id="cnum" min="0" max="9999"></p>
+                                <input type="number" name="tnum" id="cnum" min="0" max="9999" placeholder="Número"></p>
 
                             <p><label for="cest">Estado:</label> 
                                 <select name="test" id="cest">
-                                    <option select>Selecione seu estado.</option>
+                                        <option value="">Selecione seu estado</option>
                                     <optgroup label="Sudeste">
                                         <option value="rj">RJ</option>
                                         <option value="sp">SP</option>
@@ -91,14 +91,23 @@
                                     </optgroup>
                                     
                                 </select></p>
-                            <p><label for="fcity">Cidade:</label></p>
+                            <p><label for="ccity">Cidade:</label>
+                            <input type="text" name="tcity" id="ccity" placeholder="Sua Cidade..." list="citys">
+                            <datalist id="citys">
+                                <option value="Rio de Janeiro"></option>
+                                <option value="Nova Iguaçu"></option>
+                                <option value="Niterói"></option>
+                                <option value="Belford roxo"></option>
+                            </datalist></p>
 
                     </fieldset>
 
                     <fieldset id="msg">
                         <legend>Mensagem do Usuário</legend>
-                            <p><label for="furg">Grau de Urgência:</label></p>
-                            <p><label for="fmsg">Mensagem:</label></p>
+                            <p><label for="curg">Grau de Urgência:</label>
+                            MIN <input type="range" name="turg" id="curg" min="0" max="10" step="1"> MAX</p>
+                            <p><label for="cmsg">Mensagem:</label>
+                            <textarea name="tmsg" id="cmsg" cols="45" rows="5" placeholder="Deixe aqui sua mensagem..."></textarea></p>
                     </fieldset>
 
                     <fieldset id="request">
