@@ -34,38 +34,84 @@
                 </ul>
             </nav>
         </header>
-        Fale Conosco > Contato
-        Formulário de Contato
-        por Gustavo Guanabara
-        Atualizado em 01/Maio/2013
+        <section>
+            <article id="main">
+                <header id="head_main">
+                    <hgroup>
+                        <h3>Fale Conosco > Contato</h3>
+                        <h1>Formulário de Contato</h1>
+                        <h2>por Gustavo Guanabara</h2>
+                        <h3 class="h3_right">Atualizado em 01/Maio/2013</h3>
+                    </hgroup>
+                </header>
+                <form action="" method="post" id="ftell">
+                    <fieldset id="user">
+                        <legend>Identificação do Usuário</legend>
+                            <p><label for="cname">Nome:</label>
+                                <input type="text" name="tname" id="cname" size="50" placeholder="Digite aqui seu nome completo..."></p>
 
-        Identificação do Usuário
-            Nome:
-            Senha:
-            E-mail:
-            Sexo:
-                - Masculino
-                - Feminino
-            Data de Nascimento:
+                            <p><label for="cpass">Senha:</label>
+                                <input type="password" name="tpass" id="cpass" placeholder="Sua senha..." maxlength="10"></p>
 
-        Endereço do Usuário
-            Logradouro:
-            Número:
-            Estado:
-            Cidade:
+                            <p><label for="cemail">E-mail: </label>
+                                <input type="email" name="temail" id="cemail" placeholder="Seu email..." size="50"></p>
 
-        Mensagem do Usuário
-            Grau de Urgência:
-            Mensagem:
+                            <fieldset id="sexo">
+                                <legend>Sexo</legend>
+                                <input type="radio" name="tsexo" id="cmas">
+                                    <label for="cmas">Masculino</label>
+                                <input type="radio" name="tsexo" id="cfem">
+                                    <label for="cfem">Feminino</label>
+                            </fieldset>
 
-        Quero um Google Glass
-            Gostaria de adquirir um Google Glass quando disponível
-            Cor:
-            Quantidade:
-            Preço Total: R$
+                            <p><label for="cdate">Data de Nascimento:</label>
+                                <input type="date" name="tdate" id="cdate"></p>
+                    </fieldset>
 
+                    <fieldset id="adress">
+                        <legend>Endereço do Usuário</legend>
+                            <p><label for="clogra">Logradouro:</label>
+                                <input type="text" name="tloga" id="cloga" placeholder="Rua,Av,Trav..." size="10"></p>
 
-        [BOTÃO ENVIAR]
+                            <p><label for="cnum">Número:</label>
+                                <input type="number" name="tnum" id="cnum" min="0" max="9999"></p>
+
+                            <p><label for="cest">Estado:</label> 
+                                <select name="test" id="cest">
+                                    <option select>Selecione seu estado.</option>
+                                    <optgroup label="Sudeste">
+                                        <option value="rj">RJ</option>
+                                        <option value="sp">SP</option>
+                                        <option value="mg">MG</option>
+                                    </optgroup>
+                                    <optgroup label="Sul">
+                                        <option value="pr">PR</option>
+                                        <option value="sc">SC</option>
+                                        <option value="rs">RS</option>
+                                    </optgroup>
+                                    
+                                </select></p>
+                            <p><label for="fcity">Cidade:</label></p>
+
+                    </fieldset>
+
+                    <fieldset id="msg">
+                        <legend>Mensagem do Usuário</legend>
+                            <p><label for="furg">Grau de Urgência:</label></p>
+                            <p><label for="fmsg">Mensagem:</label></p>
+                    </fieldset>
+
+                    <fieldset id="request">
+                        <legend>Quero um Google Glass</legend>
+                            <p>Gostaria de adquirir um Google Glass quando disponível</p>
+                            <p>Cor:</p>
+                            <p>Quantidade:</p>
+                            <p>Preço Total: R$</p>
+                        [BOTÃO ENVIAR]
+                    </fieldset>
+                </form>
+            </article>
+        </section>
 
         <footer id="final">
             <p>
