@@ -44,7 +44,7 @@
                         <h3 class="h3_right">Atualizado em 01/Maio/2013</h3>
                     </hgroup>
                 </header>
-                <form action="" method="post" id="ftell">
+                <form action="" method="post" id="ftell" oninput="calc_total()">
                     <fieldset id="user">
                         <legend>Identificação do Usuário</legend>
                             <p><label for="cname">Nome:</label>
@@ -112,11 +112,17 @@
 
                     <fieldset id="request">
                         <legend>Quero um Google Glass</legend>
-                            <p>Gostaria de adquirir um Google Glass quando disponível</p>
-                            <p>Cor:</p>
-                            <p>Quantidade:</p>
-                            <p>Preço Total: R$</p>
-                        [BOTÃO ENVIAR]
+                            <p><input type="checkbox" name="tcheck" id="ccheck">
+                                <label for="ccheck">Gostaria de adquirir um Google Glass quando disponível</label></p>
+                            <p><label for="ccolor">Cor:</label>
+                                <input type="color" name="tcolor" id="ccolor">
+                            </p>
+                            <p><label for="cquant">Quantidade:</label>
+                            <input type="number" name="tquant" id="cquant" min="1" max="10" value="0"></p>
+                            <p><label for="ctot">Preço Total: R$</label>
+                            <input type="number" name="ttot" id="ctot" placeholder="Total" value="0" readonly></p>
+                            
+                            <input type="image" name="tsend" src="midia/images/tell/botao-enviar.png">
                     </fieldset>
                 </form>
             </article>
@@ -130,5 +136,13 @@
         </footer>
     </div>
     <script src="scripts/script_index.js"></script>
+    <script>
+        function calc_total() {
+            let quant = Number(document.getElementById("cquant").value)
+            let tot = quant * 1500
+
+            document.getElementById("ctot").value = tot
+        }
+    </script>
 </body>
 </html>
